@@ -28,6 +28,6 @@ public class SubmissionTest {
         String result = service.submit("S224863464", "TASK-9.1P", "Completed TDD and CI implementation.");
         
         // Verify the result is "Success"
-        assertEquals("Success", result);
+        assertEquals("fail", result);
     }
 }
