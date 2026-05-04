@@ -30,4 +30,12 @@ public class SubmissionTest {
         // Verify the result is "Success"
         assertEquals("Success", result);
     }
+	
+	@Test
+	public void testSubmitWithInvalidID() {
+	    OnTrackService service = new OnTrackService();
+	    // Testing a case where ID doesn't start with 'S'
+	    String result = service.submit("12345", "TASK-9.1P", "Done");
+	    assertEquals("Invalid ID", result);
+	}
 }
